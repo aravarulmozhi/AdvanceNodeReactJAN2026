@@ -569,13 +569,14 @@ function processValue(value: StringOrNumber) {
     const exhaustiveCheck: never = value;
   }
 }
+
 ```
 
 ### Summary Table
 
 | Type | Accepts Any Value? | Must Narrow Before Use? | Use Case |
-|---|---|---|---|
-| `any` | Yes | No (unsafe!) | Escape hatch, migration |
+|---    |---|---|---|
+| `any` | Yes| No (unsafe!) | Escape hatch, migration |
 | `unknown` | Yes | Yes (safe!) | External data, APIs |
 | `void` | N/A (return type) | N/A | Functions that don't return a value |
 | `never` | No value possible | N/A | Functions that never return, exhaustive checks |
@@ -660,10 +661,12 @@ let alice: User = {
 type Coordinate = [number, number];
 let point: Coordinate = [10, 20];
 
+
 // Alias for a function signature
 type MathOperation = (a: number, b: number) => number;
 const add: MathOperation = (a, b) => a + b;
 ```
+
 
 ### Interfaces (`interface` keyword)
 
