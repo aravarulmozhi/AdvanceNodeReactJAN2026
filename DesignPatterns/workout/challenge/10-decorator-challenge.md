@@ -5,6 +5,58 @@
 
 ---
 
+## Node.js Project Setup
+
+### Quick Start
+```bash
+mkdir decorator-challenge && cd decorator-challenge
+npm init -y
+npm install --save-dev typescript ts-node @types/node
+```
+
+### tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+```
+
+### package.json Scripts
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts"
+  }
+}
+```
+
+### Directory Structure
+```
+src/
+├── decorators/
+│   ├── Component.ts
+│   ├── BorderDecorator.ts
+│   └── ScrollDecorator.ts
+└── index.ts
+```
+
+### Running Your Solution
+```bash
+npm start
+```
+
+---
+
 ## Objective
 
 Add caching functionality to the Repository using the Decorator pattern.

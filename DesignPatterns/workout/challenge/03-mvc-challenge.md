@@ -5,6 +5,60 @@
 
 ---
 
+## Node.js Project Setup
+
+### Quick Start
+```bash
+mkdir mvc-challenge && cd mvc-challenge
+npm init -y
+npm install --save-dev typescript ts-node @types/node
+```
+
+### tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+```
+
+### package.json Scripts
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts"
+  }
+}
+```
+
+### Directory Structure
+```
+src/
+├── models/
+│   └── Task.ts
+├── controllers/
+│   └── TaskController.ts
+├── views/
+│   └── TaskView.ts
+└── index.ts
+```
+
+### Running Your Solution
+```bash
+npm start
+```
+
+---
+
 ## Objective
 
 Build a complete Task CRUD API using the MVC (Model-View-Controller) pattern.

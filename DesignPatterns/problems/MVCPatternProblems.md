@@ -1,3 +1,52 @@
+# Problem: MVC Pattern - Mixed Concerns Without Separation
+
+## Node.js Project Setup
+
+### Quick Start
+```bash
+mkdir mvc-pattern-problem && cd mvc-pattern-problem
+npm init -y
+npm install --save-dev typescript ts-node @types/node
+```
+
+### Create tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+```
+
+### Add to package.json scripts
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/problem.ts",
+    "dev": "ts-node src/problem.ts"
+  }
+}
+```
+
+### Run Code
+```bash
+npm start
+```
+
+---
+
+## The Problem
+
+Save this code in `src/problem.ts` and run `npm start`:
+
+```typescript
 /**
  * PROBLEM: Mixed Concerns - No Separation Between Data, Logic, and Presentation
  * 

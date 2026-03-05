@@ -1,3 +1,117 @@
+# Problem: Singleton Pattern - Multiple Database Connections
+
+## Project Setup
+
+### Step 1: Initialize Node.js Project
+```bash
+mkdir singleton-problem && cd singleton-problem
+npm init -y
+npm install --save-dev typescript ts-node @types/node
+```
+
+### Step 2: Create tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
+
+### Step 3: Create Project Structure
+```
+singleton-problem/
+├── src/
+│   └── problem.ts
+├── package.json
+└── tsconfig.json
+```
+
+### Step 4: Running the Code
+```bash
+# Option 1: Using ts-node (for development)
+npx ts-node src/problem.ts
+
+# Option 2: Compile and run
+npm run build
+node dist/problem.js
+```
+
+Update your package.json scripts:
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/problem.ts",
+    "dev": "watch-ts-node src/problem.ts"
+  }
+}
+```
+
+---
+
+## The Problem
+
+Save this code in `src/problem.ts`:
+
+```typescript
+# Problem: Singleton Pattern - Multiple Database Connections
+
+## Node.js Project Setup
+
+### Quick Start
+```bash
+mkdir singleton-problem && cd singleton-problem
+npm init -y
+npm install --save-dev typescript ts-node @types/node
+```
+
+### Create tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+```
+
+### Add to package.json scripts
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/problem.ts",
+    "dev": "ts-node src/problem.ts"
+  }
+}
+```
+
+### Run Code
+```bash
+cp -r src/ && npm start
+```
+
+---
+
+## The Problem
+
+Save this code in `src/problem.ts` and run `npm start`:
+
+```typescript
 /**
  * PROBLEM: Multiple Database Connections
  * 

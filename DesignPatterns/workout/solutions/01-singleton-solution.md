@@ -2,6 +2,57 @@
 
 ---
 
+## Node.js Project Setup
+
+### Quick Start
+```bash
+mkdir singleton-solution && cd singleton-solution
+npm init -y
+npm install --save-dev typescript ts-node @types/node
+```
+
+### tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+```
+
+### package.json Scripts
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts"
+  }
+}
+```
+
+### Directory Structure
+```
+src/
+├── patterns/
+│   └── singleton/
+│       └── DatabaseConnection.ts
+└── index.ts
+```
+
+### Run Solution
+```bash
+npm start
+```
+
+---
+
 ## Complete Implementation
 
 ```typescript
