@@ -673,7 +673,7 @@ const add: MathOperation = (a, b) => a + b;
 Interfaces are specifically for describing object shapes.
 
 ```typescript
-interface Product {
+interface Product{
   id: number;
   name: string;
   price: number;

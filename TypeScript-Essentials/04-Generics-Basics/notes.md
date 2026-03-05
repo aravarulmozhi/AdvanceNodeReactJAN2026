@@ -110,7 +110,7 @@ A generic function declares one or more **type parameters** inside angle bracket
 before the parameter list:
 
 ```ts
-function functionName<T>(param: T): T {
+function functionName<T,U,V>(param: T): T {
   // T can be used as a type anywhere inside this function
   return param;
 }
@@ -161,6 +161,7 @@ const lastStr = lastElement(["a", "b"]);   // string | undefined
 
 ---
 
+
 ## 4. Generic Inference
 
 TypeScript can usually **infer** the type argument from the values you pass in. You do NOT
@@ -175,6 +176,8 @@ function identity<T>(arg: T): T {
 
 // TypeScript INFERS T = string from the argument "hello"
 const a = identity("hello");       // T inferred as string
+
+
 const b = identity(42);            // T inferred as number
 const c = identity(true);          // T inferred as boolean
 const d = identity([1, 2, 3]);     // T inferred as number[]
@@ -186,7 +189,12 @@ Sometimes you need or want to be explicit:
 
 ```ts
 // Case 1: You want a wider type than what would be inferred
+
+
 const e = identity<string | number>("hello");  // T = string | number
+
+
+
 
 // Case 2: Empty arrays -- TypeScript cannot infer the element type
 const f = identity<string[]>([]);  // T = string[]
